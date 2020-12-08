@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <section>
+
+        {% for album in albums| sort %}
+            <article>
+                <h2>{{ album.name }}</h2>
+                <div class="metadata"> sorti en {{ album.releaseYear }} </div>
+                <div class="content">
+                    <img src="http://placehold.it/350x150" alt="">
+                    <a href="{{ path('biblio_show', {id: album.id}) }}" class="btn btn-primary">Lire la suite</a>
+                </div>
+            </article>
+        {% endfor %}
+
+    </section>
+
+{% endblock %}

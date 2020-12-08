@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <article>
+        <h2>{{ album.name }}</h2>
+        <div class="metadata"> creer le {{ album.releaseYear }} </div>
+        <div class="content">
+            <img src="http://placehold.it/350x150" alt="">
+        </div>
+    </article>
+{% endblock %}
